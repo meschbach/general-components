@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : plugin-zip.xml
+    Created on : January 15, 2012, 9:45 PM
+    Author     : gremlin
+    Description:
+-->
+<project>
+    <build>
+	<plugins>
+	    <plugin>
+		<groupId>com.meschbach.wra</groupId>
+		<artifactId>wra-maven-plugin</artifactId>
+		<!-- Quark: This needs a configuration element -->
+		<configuration>
+
+		</configuration>
+	    </plugin>
+	</plugins>
+    </build>
+</project>

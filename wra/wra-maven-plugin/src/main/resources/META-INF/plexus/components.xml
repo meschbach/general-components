@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : components.xml
+    Created on : January 14, 2012, 12:02 AM
+    Author     : Mark Eschbach
+    Description:
+	Wires in the wra packaging.
+-->
+<component-set>
+    <components>
+        <component>
+            <role>org.apache.maven.lifecycle.mapping.LifecycleMapping</role>
+            <role-hint>wra</role-hint>
+            <implementation>org.apache.maven.lifecycle.mapping.DefaultLifecycleMapping</implementation>
+            <configuration>
+                <phases>
+		    <package>com.meschbach.wra:wra-maven-plugin:wra-package</package>
+		    <install>org.apache.maven.plugins:maven-install-plugin:install</install>
+                </phases>
+            </configuration>
+        </component>
+    </components>
+</component-set>
