@@ -1,2 +1,7 @@
 
 /wra/wra-maven-plugin/target
+/expiriments/maven-integration-mojo/target/
+/wra/wra-assembly-plugin/target/
+/wra/wra-example-assembly/target/
+/wra/wra-example-archive-2/target/
+/wra/wra-example/target/

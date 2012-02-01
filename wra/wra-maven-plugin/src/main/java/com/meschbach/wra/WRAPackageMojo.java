@@ -21,6 +21,8 @@ import org.apache.maven.artifact.Artifact;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
+import org.apache.maven.project.MavenProject;
+import org.apache.maven.project.MavenProjectHelper;
 
 /**
  *
@@ -32,7 +34,17 @@ import org.apache.maven.plugin.MojoFailureException;
  * @requiresDependencyResolution runtime
  */
 public class WRAPackageMojo extends AbstractMojo {
-
+    /**
+     * Build the project
+     *
+     * @parater expresion="${project}"
+     * @required
+     */
+    MavenProject project;
+    /**
+     * @component
+     */
+    MavenProjectHelper mavenProjectHelper;
     /**
      * @parameter expression="${project.artifact}" default-value="${project.artifact}"
      */
@@ -44,7 +56,7 @@ public class WRAPackageMojo extends AbstractMojo {
     /**
      * Name of the generated JAR.
      *
-     * @parameter alias="wraName" expression="${wra.finalName}" default-value="${project.build.finalName}"
+     * @parameter alias="wraName" expression="${wra.finalName}" default-value="${project.build.finalName}.zip"
      * @required
      */
     protected String finalName;
@@ -95,6 +107,9 @@ public class WRAPackageMojo extends AbstractMojo {
 	 * Set our artifact as the default
 	 */
 	result.setFile(targetFile);
+	/*
+	 * Attach the artifact
+	 */
     }
 
     protected void processDir(ZipOutputStream zos, File dir) throws IOException {

@@ -24,7 +24,7 @@
 	</dependency>
 	<dependency>
 	    <groupId>com.meschbach.wra</groupId>
-	    <artifactId>wra-example</artifactId>
+	    <artifactId>wra-example-archive-2</artifactId>
 	    <version>${project.version}</version>
 	    <type>wra</type>
 	</dependency>

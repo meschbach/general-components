@@ -15,6 +15,7 @@
             <implementation>org.apache.maven.lifecycle.mapping.DefaultLifecycleMapping</implementation>
             <configuration>
                 <phases>
+		    <generate-surces>oorg.apache.maven.plugins:maven-dependency-plugin:resolve</generate-surces>
 		    <package>com.meschbach.wra:wra-maven-plugin:wra-package</package>
 		    <install>org.apache.maven.plugins:maven-install-plugin:install</install>
                 </phases>
